@@ -11,6 +11,7 @@ import AVFoundation
 
 class PlaySoundsViewController: UIViewController {
 
+
   // MARK: Outlets
 
   @IBOutlet weak var snailButton: UIButton!
@@ -20,6 +21,9 @@ class PlaySoundsViewController: UIViewController {
   @IBOutlet weak var echoButton: UIButton!
   @IBOutlet weak var reverbButton: UIButton!
   @IBOutlet weak var stopButton: UIButton!
+
+
+  // MARK: Properties
 
   var recordedAudioURL:URL!
   var audioFile:AVAudioFile!
@@ -58,6 +62,8 @@ class PlaySoundsViewController: UIViewController {
     stopAudio()
   }
 
+  
+  // MARK: ViewController Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
