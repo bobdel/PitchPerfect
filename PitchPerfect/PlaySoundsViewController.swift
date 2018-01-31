@@ -65,11 +65,11 @@ class PlaySoundsViewController: UIViewController {
   
   // MARK: ViewController Lifecycle
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupAudio()
-        configureUI(.notPlaying)
-    }
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    setupAudio()
+    configureUI(.notPlaying)
+  }
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(true)

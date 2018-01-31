@@ -8,7 +8,7 @@
 
 import UIKit
 import AVFoundation
-import os.log
+import os.log             // use the new os logging in iOS 11.
 
 class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
@@ -43,11 +43,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     isRecording = false
   }
 
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(true)
-    print("View Will Appear")
-    os_log("viewWillAppear called via os_log")
-  }
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "stopRecording" {
@@ -93,11 +88,11 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
   // MARK: AVAudioRecorderDelegate Methods
 
   func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-      if flag == true {
-        performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
-      } else {
-        os_log("Recording was not successful")
-      }
+    if flag == true {
+      performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
+    } else {
+      os_log("Recording was not successful")
+    }
   }
 
 }

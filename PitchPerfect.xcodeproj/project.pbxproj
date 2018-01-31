@@ -39,6 +39,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61751C892022589200A4B8D6 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				61A8F881201A6C5D00F192A5 /* AppDelegate.swift */,
+				61A8F88A201A6C5D00F192A5 /* LaunchScreen.storyboard */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		61A8F875201A6C5D00F192A5 = {
 			isa = PBXGroup;
 			children = (
@@ -59,13 +68,12 @@
 			isa = PBXGroup;
 			children = (
 				619DD933201BB12500D2C880 /* Playsoundsviewcontroller-audio.swift */,
-				61A8F881201A6C5D00F192A5 /* AppDelegate.swift */,
 				61A8F883201A6C5D00F192A5 /* RecordSoundsViewController.swift */,
 				6138E79A201AB91200DDA0AF /* PlaySoundsViewController.swift */,
 				61A8F885201A6C5D00F192A5 /* Main.storyboard */,
 				61A8F888201A6C5D00F192A5 /* Assets.xcassets */,
-				61A8F88A201A6C5D00F192A5 /* LaunchScreen.storyboard */,
 				61A8F88D201A6C5D00F192A5 /* Info.plist */,
+				61751C892022589200A4B8D6 /* Support */,
 			);
 			path = PitchPerfect;
 			sourceTree = "<group>";
