@@ -92,8 +92,22 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
       performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
     } else {
       os_log("Recording was not successful")
+      displaySimpleAlert(title: "Unable to Record.", message: "Something went wrong. Please try again.")
     }
   }
+}
 
+
+// MARK: Simple Modal Alert
+
+extension UIViewController {
+
+  func displaySimpleAlert(title:String, message:String) {
+    let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+    alert.addAction((UIAlertAction(title: "OK", style: .default, handler: nil)))
+
+    self.present(alert, animated: true, completion: nil)
+
+  }
 }
 
